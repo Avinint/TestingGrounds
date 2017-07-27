@@ -89,13 +89,13 @@ void AFirstPersonCharacter::BeginPlay()
 void AFirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	//Attach gun mesh component to Skeleton, doing it here because the skeleton is not yet created in the constructor
-	Gun = GetWorld()->SpawnActor<AGun>(
+	/*Gun = GetWorld()->SpawnActor<AGun>(
 		GunBlueprint,
 		Mesh1P->GetSocketLocation(FName("GripPoint")),
 		Mesh1P->GetSocketRotation(FName("GripPoint")));
 	Gun->AnimInstance = Mesh1P->GetAnimInstance();
 	Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
-
+	*/
 	// set up gameplay key bindings
 	check(PlayerInputComponent);
 
